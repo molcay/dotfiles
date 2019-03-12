@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+# Directory Navigation Related
+alias ..="cd .."
+alias ...="cd ../.."
+
+# Directory Info
+alias ll="ls -la"
+alias llh="ls -lah"
+ 
