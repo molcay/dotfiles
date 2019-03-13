@@ -5,6 +5,15 @@ alias ..="cd .."
 alias ...="cd ../.."
 
 # Directory Info
-alias ll="ls -la"
+alias ll="ls -la $@"
 alias llh="ls -lah"
- 
+alias bul="locate $@"
+alias bulg="locate | grep $@"
+alias listg="ls -la | grep $@"
+alias islem="ps -efl $@"
+alias islemg="ps -efl | grep $@"
+alias nanca="du -hd 1" 
+
+# Command
+alias managepy="python3 manage.py"
+alias activate=". myvenv/bin/activate"

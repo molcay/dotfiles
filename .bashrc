@@ -1,1 +1,1 @@
-alias ll='ls -la'
+# .bashrc file
