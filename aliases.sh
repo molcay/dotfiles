@@ -31,8 +31,11 @@ alias sshadd="ssh-add -K ~/.ssh/id_rsa"
 
 ## Binaries
 alias ngrok='~/Programs/ngrok/ngrok'
+alias micro='~/Programs/micro'
 
 ## Mac OS
 alias addSpaceToDock=$'defaults write com.apple.dock persistent-apps -array-add \'{"tile-type"="spacer-tile";}\' && killall Dock'
 alias showFiles='defaults write com.apple.finder AppleShowAllFiles YES; killall Finder /System/Library/CoreServices/Finder.app'
 alias hideFiles='defaults write com.apple.finder AppleShowAllFiles NO; killall Finder /System/Library/CoreServices/Finder.app'
+
+echo 'alias [OK]'
