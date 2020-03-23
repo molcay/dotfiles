@@ -1,7 +1,7 @@
 # Source other files
-[ -f ~/.dotfiles/aliases.bashrc ] && source ~/.dotfiles/aliases.sh
-[ -f ~/.dotfiles/exports.bashrc ] && source ~/.dotfiles/exports.sh
-[ -f ~/.dotfiles/functions.bashrc ] && source ~/.dotfiles/functions.sh
+[ -f ~/.dotfiles/aliases.sh ] && source ~/.dotfiles/aliases.sh
+[ -f ~/.dotfiles/exports.sh ] && source ~/.dotfiles/exports.sh
+[ -f ~/.dotfiles/functions.sh ] && source ~/.dotfiles/functions.sh
 
 # SOURCEs
 $DEBUG || echo "gcloud path.zsh.inc"
@@ -10,10 +10,7 @@ $DEBUG || echo "gcloud completion.zsh.inc"
 [ -f /Users/molcay/Programs/google-cloud-sdk/completion.zsh.inc ] && source /Users/molcay/Programs/google-cloud-sdk/completion.zsh.inc
 
 $DEBUG || echo "bgnotify.plugin.zsh"
-[ -f /Users/molcay/.zsh-background-notify/bgnotify.plugin.zsh ] &&source /Users/molcay/.zsh-background-notify/bgnotify.plugin.zsh
-
-$DEBUG || echo "sdkman-init.sh"
-[ -f $HOME/.sdkman/bin/sdkman-init.sh ] && source "$HOME/.sdkman/bin/sdkman-init.sh"
+[ -f /Users/molcay/.zsh-background-notify/bgnotify.plugin.zsh ] && source /Users/molcay/.zsh-background-notify/bgnotify.plugin.zsh
 
 ##################################################
 
@@ -21,16 +18,6 @@ $DEBUG || echo "sdkman-init.sh"
 # THE FUCK
 $DEBUG || echo "eval thefuck alias"
 command -v thefuck && eval $(thefuck --alias)
-
-# NVM
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
-# SDKMAN
-#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
-export SDKMAN_DIR="/Users/molcay/.sdkman"
-[[ -s "/Users/molcay/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/molcay/.sdkman/bin/sdkman-init.sh"
 
 # added by travis gem
 $DEBUG || echo "travis"
@@ -56,3 +43,15 @@ ulimit -S -n 2048 # max opened file count
 
 # starship prompt
 command -v starship && eval "$(starship init zsh)"
+
+# NVM
+$DEBUG || echo "NVM"
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# SDKMAN
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+$DEBUG || echo "SDKMAN"
+export SDKMAN_DIR="/Users/molcay/.sdkman"
+[[ -s "/Users/molcay/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/molcay/.sdkman/bin/sdkman-init.sh"

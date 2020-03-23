@@ -38,4 +38,4 @@ alias addSpaceToDock=$'defaults write com.apple.dock persistent-apps -array-add 
 alias showFiles='defaults write com.apple.finder AppleShowAllFiles YES; killall Finder /System/Library/CoreServices/Finder.app'
 alias hideFiles='defaults write com.apple.finder AppleShowAllFiles NO; killall Finder /System/Library/CoreServices/Finder.app'
 
-echo 'alias [OK]'
+$DEBUG || echo 'aliases [OK]'
