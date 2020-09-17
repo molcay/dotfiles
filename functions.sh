@@ -16,9 +16,8 @@ createPythonProject() {
     fi
     mkdir $1
     cd $1
-    python3 -m venv myvenv
-    source myvenv/bin/activate
-    pip install --upgrade pip
+    python3 -m venv .venv
+    .venv/bin/activate/pip install --upgrade pip
     echo "Ready for hunt..."
 }
 

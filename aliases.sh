@@ -1,9 +1,5 @@
 #!/usr/bin/env bash
 
-# Directory Navigation Related
-alias ..="cd .."
-alias ...="cd ../.."
-
 # Directory Info
 alias ll="ls -la $@"
 alias llh="ls -lah"
@@ -20,7 +16,7 @@ alias cvenv="python3 -m venv $@"  # Create virtual environment with given name
 alias upgpip="pip install --upgrade pip"  # Upgrade PIP
 alias managepy="python3 manage.py"  # Django App Manager
 alias httpServer="python3 -m http.server $@"  # Start Simple HTTP Server
-alias activate="source myvenv/bin/activate"  # Activate virtual environment for Python
+alias activate="source .venv/bin/activate"  # Activate virtual environment for Python
 
 ## JVM Related
 alias sbtDebug="sbt -jvm-debug 5005"
