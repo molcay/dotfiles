@@ -26,7 +26,7 @@ alias evalssha='eval "$(ssh-agent -s)"'
 alias sshadd="ssh-add -K ~/.ssh/id_rsa"
 
 ## Binaries
-alias ngrok='~/Programs/ngrok/ngrok'
+alias ngrok='~/Programs/ngrok'
 alias micro='~/Programs/micro'
 
 ## Mac OS
